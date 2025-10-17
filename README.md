@@ -35,3 +35,4 @@ Este es el esquema JSON (respuesta esperada de la API) para cada producto/servic
     "disponible": true
   }
 ]
+Estructura verificada.
