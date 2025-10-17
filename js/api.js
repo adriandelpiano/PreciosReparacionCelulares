@@ -1,5 +1,6 @@
+
 // 🛠️ Herramienta para Agente IA: Carga el listado de productos desde un archivo JSON local.
-const API_BASE_URL = '/data/precios.json';
+const API_BASE_URL = '../../data/precios.json';
 
 /**
  * Carga el listado de productos desde el archivo JSON local.
