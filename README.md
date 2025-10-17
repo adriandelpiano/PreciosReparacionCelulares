@@ -1,3 +1,4 @@
+
 # MODELO DE DATOS: Producto de Reparación
 
 Este es el esquema JSON (respuesta esperada de la API) para cada producto/servicio.
