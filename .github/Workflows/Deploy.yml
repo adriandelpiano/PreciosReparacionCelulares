@@ -1,0 +1,32 @@
+# Nombre: Despliegue Estático a GitHub Pages
+# Este flujo de trabajo se ejecuta cada vez que hay un 'push' a la rama 'main'.
+
+name: Deploy Static Website to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Activa el flujo de trabajo al subir cambios a la rama principal
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository 🛒
+        uses: actions/checkout@v4
+        
+      # Configura el entorno de Node.js (necesario para el despliegue estático)
+      - name: Set up Node.js 🚀
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' 
+      
+      # Paso de despliegue principal
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Indica que solo la carpeta 'src/frontend' debe ser publicada
+          publish_dir: ./src/frontend 
+          # La rama de destino que GitHub Pages usa para servir el sitio
+          publish_branch: gh-pages 
