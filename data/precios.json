@@ -1,0 +1,30 @@
+
+[
+  {
+    "id": 101,
+    "tipo_servicio": "Reparación Módulo",
+    "marca": "Apple",
+    "modelo": "iPhone 14 Pro Max",
+    "componente": "Módulo OLED Original",
+    "precio_usd": 450.00,
+    "disponible": true
+  },
+  {
+    "id": 205,
+    "tipo_servicio": "Reparación Pin",
+    "marca": "Samsung",
+    "modelo": "Galaxy A52",
+    "componente": "Pin de Carga USB-C",
+    "precio_usd": 45.50,
+    "disponible": true
+  },
+  {
+    "id": 310,
+    "tipo_servicio": "Reemplazo Batería",
+    "marca": "Xiaomi",
+    "modelo": "Mi 11",
+    "componente": "Batería de Alta Capacidad",
+    "precio_usd": 60.00,
+    "disponible": false
+  }
+]

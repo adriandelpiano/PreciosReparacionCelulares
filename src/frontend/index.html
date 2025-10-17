@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,13 +11,37 @@
     <header>
         <h1>Servicios de Reparación por Componente</h1>
     </header>
+
     <main>
+        <details>
+            <summary>Administrar Inventario</summary>
+            <section id="admin-panel">
+                <h2>Añadir / Editar Servicio</h2>
+                <form id="admin-form">
+                    <input type="hidden" id="product-id">
+                    <div class="form-grid">
+                        <input type="text" id="marca" placeholder="Marca" required>
+                        <input type="text" id="modelo" placeholder="Modelo" required>
+                        <input type="text" id="tipo_servicio" placeholder="Tipo de Servicio" required>
+                        <input type="text" id="componente" placeholder="Componente" required>
+                        <input type="number" id="precio_usd" placeholder="Precio (USD)" step="0.01" required>
+                        <label>
+                            <input type="checkbox" id="disponible">
+                            Disponible
+                        </label>
+                    </div>
+                    <button type="submit">Guardar</button>
+                    <button type="button" id="cancel-edit">Cancelar</button>
+                </form>
+            </section>
+        </details>
+
         <div id="product-list" class="grid-container">
-            <h2>Cargando inventario...</h2>
         </div>
     </main>
 
     <script src="js/api.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 </html>
