@@ -1,3 +1,4 @@
+
 import { fetchProducts } from './api.js';
 
 const adminForm = document.getElementById('admin-form');
@@ -10,6 +11,7 @@ const precioUsdInput = document.getElementById('precio_usd');
 const disponibleInput = document.getElementById('disponible');
 const cancelEditButton = document.getElementById('cancel-edit');
 const productListElement = document.getElementById('product-list');
+const storedDataElement = document.getElementById('stored-data');
 
 let products = [];
 
@@ -23,11 +25,18 @@ async function loadProducts() {
         saveProducts();
     }
     renderProducts();
+    renderStoredData();
 }
 
 // Guardar productos en localStorage
 function saveProducts() {
     localStorage.setItem('products', JSON.stringify(products));
+    renderStoredData();
+}
+
+// Renderizar datos en el area de texto
+function renderStoredData() {
+    storedDataElement.textContent = JSON.stringify(products, null, 2);
 }
 
 // Renderizar productos
